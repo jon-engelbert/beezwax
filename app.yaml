@@ -1,4 +1,4 @@
-application: webapp2-user-authentication
+application: beezwax
 version: 1
 runtime: python27
 api_version: 1
@@ -6,19 +6,19 @@ threadsafe: yes
 
 handlers:
 - url: /signup
-  script: main.app
+  script: helloapp.app
   secure: always
 
 - url: /login
-  script: main.app
+  script: helloapp.app
   secure: always
 
 - url: /forgot
-  script: main.app
+  script: helloapp.app
   secure: always
 
 - url: .*
-  script: main.app
+  script: helloapp.app
 
 
 libraries:
