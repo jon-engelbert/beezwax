@@ -1,0 +1,22 @@
+	//-----------------------------------------
+    // Parse the JSON file passed in as 'atlasJSON'
+    // that is associated to this atlas.
+	parseAtlasDefinition: function (atlasJSON) {
+        // Parse the input 'atlasJSON' using the
+        // JSON.parse method and store it in a
+        // variable.
+        //
+		// YOUR CODE HERE
+    
+        var atlasParsed = JSON.parse(atlasJSON);
+        // YOUR CODE HERE
+        var sprites = atlasParsed.frames;
+        for (var key in sprites) {
+            var spriteFrame = sprites[key].frame;
+            var cx = -spriteFrame.w/2;
+            var cy = -spriteFrame.h/2;
+            this.defSprite(key, spriteFrame.x, spriteFrame.y, spriteFrame.w, spriteFrame.h, cx, cy);
+        }
+	}
+});
+
